@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Maintenance</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">     
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=Poppins" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f0f0f;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: left;
-            padding: 20px;
-            max-width: 600px;
-            width: 80%;
-        }
-        h1 {
-            color: #999;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        p {
-            color: #666;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kishin Madhwani</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="logo-light.png" />
+  <link rel="preload" as="image" href="logo-dark.png" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Hey there!</h1>
-        <p>Thanks for visiting my portfolio. I'm currently revamping it to showcase my latest projects and skills. Please check back soon to see the updates!</p>
+  <div class="container">
+    <div class="intro">
+      <h2><strong>Engineer. Designer.</strong></h2>
+      <p>
+        I build quiet systems that speak volumes.<br />
+        Data flows. Ideas shape.<br />
+        Everything connects.
+      </p>
     </div>
+    <div class="nav-links">
+      <a href="https://github.com/kishinmadhwani">Work ↗</a>
+      <a href="https://www.behance.net/kishinmadhwani">Behance ↗</a>
+      <a href="https://x.com/KishinMadhwani">Twitter ↗</a>
+      <a href="mailto:example@email.com">Mail ↗</a>
+    </div>
+    <div class="logo" onclick="toggleTheme()">
+      <img
+        id="logo-img"
+        src="logo-light.png"
+        alt="Logo"
+        />
+        <span class="tooltip-text">Click Me</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
