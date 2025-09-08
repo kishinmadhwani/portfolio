@@ -8,3 +8,20 @@ function toggleTheme() {
     logo.src = 'logo-light.png';
   }
 }
+
+const logoContainer = document.querySelector('.logo');
+let tooltipTimeout;
+
+logoContainer.addEventListener('mouseenter', () => {
+  logoContainer.classList.add('show-tooltip');
+
+  clearTimeout(tooltipTimeout); 
+  tooltipTimeout = setTimeout(() => {
+    logoContainer.classList.remove('show-tooltip');
+  }, 2000); 
+});
+
+logoContainer.addEventListener('mouseleave', () => {
+  clearTimeout(tooltipTimeout); 
+  logoContainer.classList.remove('show-tooltip'); 
+});
