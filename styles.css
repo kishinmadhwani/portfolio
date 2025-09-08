@@ -8,7 +8,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-color, #e7e7e7);
   color: var(--text-color, #232323);
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,33 +79,28 @@ body:not(.dark) {
 
 .tooltip-text {
   visibility: hidden;
-  width: max-content;
-  max-width: 180px;
-  background-color: var(--text-color);  
-  color: var(--bg-color);               
-  font-weight: 600;
-  text-align: center;
-  border-radius: 8px;                   
-  padding: 6px 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
   position: absolute;
-  bottom: 100%;                          
+  bottom: 100%;
   right: 50%;
   transform: translateX(50%);
   margin-bottom: 8px;
   font-size: 13px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+  font-weight: 600;
+  background-color: var(--text-color);  
+  color: var(--bg-color);               
+  border-radius: 8px;
+  padding: 6px 12px;
   white-space: nowrap;
   z-index: 10;
   user-select: none;
-  transition: opacity 0.10s ease 0s;
 }
 
-.logo:hover .tooltip-text {
+.logo.show-tooltip .tooltip-text {
   visibility: visible;
   opacity: 1;
-  transition-delay: 0.10s; 
 }
 
 @media (max-width: 600px) {
